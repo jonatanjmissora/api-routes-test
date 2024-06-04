@@ -1,0 +1,12 @@
+import { NextResponse } from 'next/server';
+
+const API_URL = 'https://digitalmoney.digitalhouse.com/ping';
+
+export async function GET() {
+  const res = await fetch(API_URL, {
+    headers: { 'Content-Type': 'application/json', charset: 'utf-8' },
+  });
+
+  const resp = await res.json()
+  return NextResponse.json(resp);
+}
