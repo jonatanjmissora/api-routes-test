@@ -11,10 +11,10 @@ export default async function Service() {
 
   return (
     <>
-      <h1>Ping</h1>
-      {data.map((product) => (
-        <p key={product.id} className="text-sm border border-black">
-          {product.name}
+      <h1 className="text-xl font-bold border-b border-black my-8" > Servicios </h1>
+      {data.map((service) => (
+        <p key={service.id} className="text-sm border-b border-black my-2">
+          ID {service.id} name {service.name}
         </p>
       ))}
     </>

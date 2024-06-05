@@ -12,8 +12,10 @@ export default async function Ping() {
 
   return (
     <>
-      <h1>Ping</h1>
-      {data}
+      <h1>Mando un Ping</h1>
+      <p>
+        Obtengo un : {data}
+      </p>
     </>
   )
 }
