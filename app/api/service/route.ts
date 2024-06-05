@@ -4,7 +4,7 @@ const API_URL = 'https://digitalmoney.digitalhouse.com/service';
 
 export async function GET() {
   const res = await fetch(API_URL, {
-    headers: { 'Content-Type': 'application/json', charset: 'utf-8' },
+    headers: { 'Content-Type': 'application/json' },
   });
 
   const resp = await res.json()

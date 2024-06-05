@@ -7,6 +7,7 @@ export default function Home() {
       <Link href={'/service'}>Service</Link>
       <Link href={'/ping'}>Ping</Link>
       <Link href={'/login'}>Login</Link>
+      <Link href={'/mail'}>Mail</Link>
     </main>
   );
 }
