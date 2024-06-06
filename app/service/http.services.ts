@@ -1,9 +1,11 @@
+import { LoginTypes } from "../types/login.type";
+
 const localHost =
   'http://localhost:3000/';
 
-export const login = async (loginData) => {
+export const login = async (loginData: LoginTypes) => {
 
-  return await fetch(`${localHost}api/login`, {
+  return fetch(`${localHost}api/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(loginData),
@@ -11,12 +13,6 @@ export const login = async (loginData) => {
 }
 
 export const getUser = async (user_id: string) => {
-
-  TODO get token del cookie y pasarlo al body, con el user_id
-
-  return await fetch(`${localHost}api/users/${user_id}`, {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(),
-  });
+  console.log("aca paso")
+  return await fetch(`${localHost}api/users/${user_id}`);
 }

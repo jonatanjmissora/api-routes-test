@@ -20,7 +20,11 @@ export async function POST(request: NextRequest) {
       if (data.status === 404) error = "Usuario no registrado (404)";
     }
     const token = await data.json()
-    cookies().set('SwaggerToken', JSON.stringify(token));
+    if (token?.token) {
+      cookies().set('swagger_token', token.token);
+      cookies().set('swagger_user_id', "40");
+      cookies().set('swagger_account_id', "23");
+    }
     return NextResponse.json({ token, error });
   } catch (e) {
     if (e instanceof Error)

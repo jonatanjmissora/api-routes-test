@@ -3,9 +3,7 @@
 import { login } from "@/app/service/http.services";
 import { useState } from "react";
 
-
-
-export default function Mail() {
+export default function Login() {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -51,7 +49,7 @@ export default function Mail() {
       <p className="text-red-800 my-4">error: {loginError}</p>
       <p className="sm:w-[50%] w-screen break-word">token: {loginResp}</p>
 
-      <div className="absolute bottom-[5rem] left-[35%]">
+      <div className="absolute bottom-[5rem] sm:left-[35%] left-0">
         <p>Valido los 3 errores que me puede arrojar la respuesta :</p>
         <ul>
           <li> ➡ 401 invalid credencials </li>

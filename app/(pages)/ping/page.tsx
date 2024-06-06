@@ -12,7 +12,7 @@ export default async function Ping() {
 
   return (
     <>
-      <h1>Mando un Ping</h1>
+      <h1 className="text-xl font-bold border-b border-black my-8" >Mando un Ping</h1>
       <p>
         Obtengo un : {data}
       </p>
